@@ -74,7 +74,7 @@ namespace P2
             // Use ulong for n, t, h, d.
             if (!ulong.TryParse(variables["n"], out ulong n) || n < 1)
             {
-                Console.WriteLine("Error: 'n' (maximum concurrent instances) must be a positive integer.");
+                Console.WriteLine("Error: 'n' (maximum concurrent instances) must be a positive integer, 0 instances is not allowed.");
                 return null;
             }
             if (!ulong.TryParse(variables["t"], out ulong tanks))
