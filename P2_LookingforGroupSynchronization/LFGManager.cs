@@ -44,7 +44,7 @@ namespace P2
         /// If so, it decrements the counts and returns a new Party object.
         /// Returns false if a party cannot be formed.
         /// </summary>
-        public bool TryFormParty(out Party party)
+        public bool TryFormParty(out Party? party)
         {
             lock (_lock)
             {

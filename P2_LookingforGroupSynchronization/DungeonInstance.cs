@@ -17,6 +17,7 @@ namespace P2
         private readonly uint _t1; // minimum run time (seconds)
         private readonly uint _t2; // maximum run time (seconds)
         private readonly Random _random;
+        private readonly AutoResetEvent _signal = new AutoResetEvent(false);
 
         public int InstanceId { get; }
         public InstanceStatus Status { get; private set; }
@@ -37,8 +38,16 @@ namespace P2
         }
 
         /// <summary>
+        /// Signals this instance to attempt forming a party.
+        /// </summary>
+        public void Signal()
+        {
+            _signal.Set();
+        }
+
+        /// <summary>
         /// Main loop for the dungeon instance.
-        /// The instance repeatedly tries to form a party.
+        /// The instance waits for a signal (from the scheduler) before trying to form a party.
         /// If a party is formed, it simulates a dungeon run (random sleep between t1 and t2 seconds),
         /// updates its counters, and then continues.
         /// When no party can be formed, it sets its status to Done and exits.
@@ -47,13 +56,15 @@ namespace P2
         {
             while (true)
             {
-                // Signal that this instance is waiting for a party.
+                // Wait for a signal from the scheduler.
+                _signal.WaitOne();
+                // Set status to Waiting to indicate readiness to form a party.
                 Status = InstanceStatus.Waiting;
                 
                 // Attempt to form a party.
-                if (_lfgManager.TryFormParty(out Party party))
+                if (_lfgManager.TryFormParty(out Party? party))
                 {
-                    // Party formed, start the dungeon run.
+                    // Party formed; simulate dungeon run.
                     Status = InstanceStatus.Running;
                     
                     // Generate a random run time between t1 and t2 (inclusive).
