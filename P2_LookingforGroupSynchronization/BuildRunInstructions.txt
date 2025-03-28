@@ -1,0 +1,23 @@
+Prerequisites:
+- Ensure you have the .NET SDK installed. You can verify by running:
+    dotnet --version
+
+Steps:
+
+1. Open your terminal or command prompt.
+
+2. Navigate to the project directory where your .csproj file is located.
+   Example:
+       cd C:\Path\To\P2_LookingforGroupSynchronization
+
+3. Restore any necessary packages (if not already done):
+       dotnet restore
+
+4. Build the project:
+       dotnet build
+   - This compiles the source code and creates the necessary output files.
+
+5. Run the project:
+       dotnet run
+   - The program will execute and read the "input.txt" file from the current directory.
+     Make sure "input.txt" is present in the project folder.
