@@ -6,8 +6,8 @@ namespace P2
     // Enumeration for the instance status.
     public enum InstanceStatus
     {
-        Waiting,
-        Running,
+        Empty,
+        Active,
         Done
     }
 
@@ -32,7 +32,7 @@ namespace P2
             _lfgManager = lfgManager;
             // Seed Random based on instanceId and current time to ensure varied runs.
             _random = new Random(instanceId + Environment.TickCount);
-            Status = InstanceStatus.Waiting;
+            Status = InstanceStatus.Empty;
             PartiesCompleted = 0;
             TotalTimeServed = TimeSpan.Zero;
         }
@@ -49,7 +49,7 @@ namespace P2
         /// Main loop for the dungeon instance.
         /// The instance waits for a signal (from the scheduler) before trying to form a party.
         /// If a party is formed, it simulates a dungeon run (random sleep between t1 and t2 seconds),
-        /// updates its counters, and then continues.
+        /// updates its counters, and then resets its status to Empty for the next round.
         /// When no party can be formed, it sets its status to Done and exits.
         /// </summary>
         public void RunInstance()
@@ -58,14 +58,14 @@ namespace P2
             {
                 // Wait for a signal from the scheduler.
                 _signal.WaitOne();
-                // Set status to Waiting to indicate readiness to form a party.
-                Status = InstanceStatus.Waiting;
+                // Set status to Empty to indicate readiness to form a party.
+                Status = InstanceStatus.Empty;
                 
                 // Attempt to form a party.
                 if (_lfgManager.TryFormParty(out Party? party))
                 {
                     // Party formed; simulate dungeon run.
-                    Status = InstanceStatus.Running;
+                    Status = InstanceStatus.Active;
                     
                     // Generate a random run time between t1 and t2 (inclusive).
                     int runTimeSeconds = _random.Next((int)_t1, (int)_t2 + 1);
@@ -76,6 +76,9 @@ namespace P2
                     // Update counters.
                     PartiesCompleted++;
                     TotalTimeServed += TimeSpan.FromSeconds(runTimeSeconds);
+                    
+                    // After completing the run, reset status to Empty so the scheduler can signal again.
+                    Status = InstanceStatus.Empty;
                 }
                 else
                 {

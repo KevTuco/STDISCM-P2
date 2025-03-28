@@ -35,7 +35,7 @@ namespace P2
                     break;
 
                 // Round-robin: signal instance if it is waiting.
-                if (_instances[index].Status == InstanceStatus.Waiting)
+                if (_instances[index].Status == InstanceStatus.Empty)
                 {
                     _instances[index].Signal();
                 }
