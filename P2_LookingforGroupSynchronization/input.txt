@@ -2,5 +2,5 @@ n: 3
 t: 2
 h: 2
 d: 7
-t1: <value>
-t2: <value>
+t1: 3
+t2: 8
