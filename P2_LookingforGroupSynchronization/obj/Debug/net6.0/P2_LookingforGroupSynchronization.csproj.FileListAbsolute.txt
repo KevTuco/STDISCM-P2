@@ -1,0 +1,15 @@
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\bin\Debug\net6.0\P2_LookingforGroupSynchronization.exe
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\bin\Debug\net6.0\P2_LookingforGroupSynchronization.deps.json
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\bin\Debug\net6.0\P2_LookingforGroupSynchronization.runtimeconfig.json
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\bin\Debug\net6.0\P2_LookingforGroupSynchronization.dll
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\bin\Debug\net6.0\P2_LookingforGroupSynchronization.pdb
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.dll
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\refint\P2_LookingforGroupSynchronization.dll
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.pdb
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\P2_LookingforGroupSynchronization.genruntimeconfig.cache
+C:\Users\kevin\OneDrive\Desktop\College\4th Year\STDISCM\STDISCM-P2\P2_LookingforGroupSynchronization\obj\Debug\net6.0\ref\P2_LookingforGroupSynchronization.dll
